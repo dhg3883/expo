@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+    font-family: 'poppins', sans-serif;
+    font-family: "Rubik", sans-serif;
+  font-optical-sizing: auto;
+    font-style: normal;
+}
+.black{
+    background-color: black;
+    color: white;
+    padding: 40px;
+    font-size: 40px; 
+    font-weight: 400;
+}
+.white{
+    background-color: white;
+    color: black;
+    padding: 40px;
+    font-size: 40px; 
+    font-weight: 400;
+}
+.center{
+    text-align: center;
+}
+.left{
+    text-align: end;
+}
