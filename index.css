@@ -6,8 +6,8 @@
     --text-dark: #17181b;
     --muted: #a6a8ad;
     --muted-dark: #5b5d63;
-    --accent: #ff7a1a;
-    --accent-dark: #d9640d;
+    --accent: #a94943;
+    --accent-dark: #6a2e2a;
     --radius: 14px;
     --max: 1120px;
 }
@@ -138,7 +138,7 @@ img{
     display: flex;
     align-items: center;
     background:
-        radial-gradient(circle at 80% 20%, rgba(255,122,26,0.18), transparent 55%),
+        radial-gradient(circle at 80% 20%, rgba(169,73,67,0.4), transparent 55%),
         var(--bg);
     color: var(--text);
     padding: 140px 24px 80px;
