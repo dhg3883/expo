@@ -325,24 +325,15 @@ img{
     font-size: .95rem;
 }
 
-/* ---------- Model 3D placeholder ---------- */
+/* ---------- Model 3D ---------- */
 .model-viewer{
-    aspect-ratio: 16 / 8;
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
     border-radius: var(--radius);
-    border: 2px dashed rgba(255,255,255,0.25);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: var(--muted);
-    background: repeating-linear-gradient(
-        45deg,
-        rgba(255,255,255,0.02),
-        rgba(255,255,255,0.02) 10px,
-        rgba(255,255,255,0.05) 10px,
-        rgba(255,255,255,0.05) 20px
-    );
-    padding: 24px;
+    overflow: hidden;
+    background: radial-gradient(circle at 50% 35%, rgba(255,255,255,0.08), transparent 70%), #1c1d20;
+    --poster-color: transparent;
 }
 
 /* ---------- Team ---------- */
