@@ -1,3 +1,4 @@
+
 document.addEventListener('DOMContentLoaded', () => {
 
     // Año en el footer
@@ -9,6 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const onScroll = () => {
         header.classList.toggle('scrolled', window.scrollY > 12);
     };
+    
     onScroll();
     window.addEventListener('scroll', onScroll);
 

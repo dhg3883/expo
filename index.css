@@ -40,7 +40,21 @@ img{
     max-width: 100%;
     display: block;
 }
-
+.title{
+        /* Apply the animation */
+    animation: pulseGlow 5s ease-in-out infinite alternate;
+}
+/* Define the animation steps */
+@keyframes pulseGlow {
+    0% {
+        transform: scale(0.95);
+        text-shadow: 0 0 10px rgba(169,73,67,0.4);
+    }
+    100% {
+        transform: scale(1.05);
+        text-shadow: 0 0 30px rgba(169,73,67,0.6), 0 0 50px rgba(169,73,67,0.4);
+    }
+}
 /* ---------- Header ---------- */
 #site-header{
     position: fixed;
@@ -307,11 +321,20 @@ img{
     border: 1px solid rgba(17,18,20,0.06);
     box-shadow: 0 8px 30px rgba(17,18,20,0.06);
     transition: transform .25s ease, box-shadow .25s ease;
+    h3{
+        text-align: center;
+    }
 }
 
 .feature-card:hover{
-    transform: translateY(-6px);
-    box-shadow: 0 14px 34px rgba(17,18,20,0.12);
+    margin-top: -6px;
+    box-shadow: 0 14px 34px rgba(17,18,20,0.15);
+    transition: all 0.2s;
+    h3{
+        transition: all 0.2s ease-in-out;
+        scale: 1.25;
+    }
+
 }
 
 .feature-card h3{
@@ -351,12 +374,13 @@ img{
     text-align: center;
     border: 1px solid rgba(17,18,20,0.06);
     box-shadow: 0 8px 30px rgba(17,18,20,0.06);
-    transition: transform .25s ease, box-shadow .25s ease;
+
 }
 
 .team-card:hover{
-    transform: translateY(-6px);
-    box-shadow: 0 14px 34px rgba(17,18,20,0.12);
+    margin-top: -6px;
+    box-shadow: 0 14px 34px rgba(17,18,20,0.15);
+    transition: all 0.2s;
 }
 
 .team-avatar{
