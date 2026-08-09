@@ -340,7 +340,6 @@ img{
 .team-grid{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 400px));
-    grid-template-columns: repeat(auto-fit, minmax(200px, 400px));
     gap: 20px;
     padding: 0 100px;
 }
@@ -450,5 +449,9 @@ img{
 
     .feature-grid{
         grid-template-columns: 1fr;
+    }
+    .team-grid{
+        grid-template-columns: 1fr;
+        padding: 0 24px;
     }
 }
