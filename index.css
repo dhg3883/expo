@@ -36,10 +36,6 @@ a{
     color: inherit;
 }
 
-img{
-    max-width: 100%;
-    display: block;
-}
 .title{
         /* Apply the animation */
     animation: pulseGlow 5s ease-in-out infinite alternate;
@@ -88,9 +84,37 @@ img{
     font-weight: 700;
     font-size: 1.4rem;
     letter-spacing: .5px;
+    position: relative;
+    z-index: 1;
+    img{
+        height: 53px;
+            width: auto;
+            position: absolute;
+            left: 0;
+            top: -15%;
+            opacity: 0;
+            transition: all .4s ease-in-out;
+    }
 }
 
-.logo span{
+.text-logo{
+    position: relative;
+    transform: translateX(0);
+    transition: all .3s ease-in-out;
+}
+
+.logo:hover,
+.logo:focus-visible{
+
+    img{
+        transform: translateX(-10px);
+        opacity: 1;
+    }
+    .text-logo{
+        transform: translateX(20px);
+    }
+}
+.logo .dif{
     color: var(--accent);
 }
 
@@ -148,6 +172,9 @@ img{
 
 /* ---------- Hero ---------- */
 .hero{
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
     min-height: 100vh;
     display: flex;
     align-items: center;
@@ -157,7 +184,15 @@ img{
     color: var(--text);
     padding: 140px 24px 80px;
 }
-
+.hero::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: url("logo.png") right center / auto 80% no-repeat;
+    opacity: 0.15;
+    pointer-events: none;
+}
 .hero-content{
     max-width: var(--max);
     margin: 0 auto;
@@ -409,11 +444,22 @@ img{
 
 /* ---------- Footer ---------- */
 .site-footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
     background: var(--bg);
     color: var(--muted);
     text-align: center;
     padding: 28px 24px;
     font-size: .85rem;
+}
+
+.footer-mascot{
+    width: 56px;
+    height: 56px;
+    object-fit: contain;
+    flex-shrink: 0;
 }
 
 /* ---------- Reveal animation ---------- */
@@ -456,7 +502,9 @@ img{
         pointer-events: none;
         transition: transform .3s ease, opacity .3s ease;
     }
-
+.logoimg{
+    display: none;
+}
     #main-nav.open{
         transform: translateY(0);
         opacity: 1;
