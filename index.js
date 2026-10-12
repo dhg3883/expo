@@ -35,6 +35,21 @@ document.addEventListener('DOMContentLoaded', () => {
         }, { rootMargin: '-20% 0px -60% 0px' });
         document.querySelectorAll('main section[id]').forEach(section => observer.observe(section));
     }
+    // Content remains visible if JavaScript or observers are unavailable.
+    if ('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        const revealObserver = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) return;
+                entry.target.classList.remove('reveal-pending');
+                entry.target.classList.add('is-visible');
+                revealObserver.unobserve(entry.target);
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(element => {
+            element.classList.add('reveal-pending');
+            revealObserver.observe(element);
+        });
+    }
     const model = document.getElementById('drill-model');
     const rotate = document.getElementById('rotate-toggle');
     const reset = document.getElementById('reset-view');

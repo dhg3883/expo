@@ -427,3 +427,46 @@ h1 {
 /* Preserve the original DrillBase palette with readable accent text. */
 .hero .eyebrow, .title, .visual-caption a, #modelo-3d .eyebrow, .model-tag { color: #cf817b; }
 .project-strip { color: #fff; }
+
+/* Atmospheric banner and original motion, respecting reduced motion. */
+.hero { position: relative; isolation: isolate; overflow: hidden; }
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: -24px;
+    z-index: -1;
+    background: url("logo.png") right center / auto 95% no-repeat;
+    opacity: .16;
+    filter: blur(7px);
+    pointer-events: none;
+}
+.hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: linear-gradient(90deg, #0e0f11e6 0%, #0e0f1170 65%, #0e0f1120);
+    pointer-events: none;
+}
+@media (prefers-reduced-motion: no-preference) {
+    .title { animation: pulseGlow 5s ease-in-out infinite alternate; }
+    @keyframes pulseGlow {
+        from { text-shadow: 0 0 10px rgba(169,73,67,.25); }
+        to { text-shadow: 0 0 30px rgba(169,73,67,.6), 0 0 50px rgba(169,73,67,.3); }
+    }
+    .reveal-pending { opacity: 0; transform: translateY(24px); }
+    .reveal { transition: opacity .7s ease, transform .7s ease; }
+    .reveal.is-visible { opacity: 1; transform: translateY(0); }
+    .hero-visual { animation: bannerEntrance .9s ease both; }
+    @keyframes bannerEntrance {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+    .logo img { opacity: 0; transform: translateX(-10px); transition: opacity .3s, transform .3s; }
+    .logo:hover img, .logo:focus-visible img { opacity: 1; transform: translateX(0); }
+    .team-card { transition: transform .25s ease, box-shadow .25s ease; }
+    .team-card:hover { transform: translateY(-6px); box-shadow: 0 14px 34px #11121415; }
+}
+@media (max-width: 800px) {
+    .hero::before { background-position: center top; background-size: auto 70%; opacity: .13; }
+}
