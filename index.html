@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>DrillBase | Expotec 2026</title>
+        <title>DrillBase | Perforación inteligente</title>
         <meta name="description"
             content="DrillBase: máquina de perforación automatizada más rápida, precisa y con menos esfuerzo físico para trabajos de construcción.">
         <link rel="stylesheet" href="index.css">
@@ -18,14 +18,13 @@
 
     </head>
     <body>
-<a class="skip-link" href="#contenido">Saltar al contenido</a>
 
         <header id="site-header">
             <div class="nav-wrap">
               <div><a href="#top" class="logo"><img src="escondido.png" alt="Logo"><div class="text-logo">Drill<span class="dif">Base</span></div></a></div>
 
                 <nav id="main-nav">
-                    <a href="#como-funciona" class="nav-link">Cómo funciona</a>
+                    <a href="#como-funciona" class="nav-link">Cómo funcioa</a>
                     <a href="#aplicaciones" class="nav-link">Aplicaciones</a>
                     <a href="#objetivo" class="nav-link">Objetivo</a>
                     <a href="#modelo-3d" class="nav-link">Modelo 3D</a>
@@ -33,25 +32,27 @@
                 </nav>
 
                 <button id="nav-toggle" aria-label="Abrir menú"
-                    aria-expanded="false" aria-controls="main-nav">
+                    aria-expanded="false">
                     <span></span><span></span><span></span>
                 </button>
             </div>
         </header>
 
-        <main id="contenido">
+        <main>
 
             <section id="top" class="hero">
                 <div class="hero-content reveal">
-                    <p class="eyebrow">Expotec 2026 · Proyecto de ingeniería</p>
+                    <p class="eyebrow">Proyecto de ingeniería</p>
                     <h1>
-                        Perforar mejor.<br><span class="title">Construir más fácil.</span>
+                        <span class="title">Perforar el suelo, de</span>
+                        <span class="title"> forma más rápida y</span>
+                        <span class="title">precisa.</span>
                     </h1>
                     <p class="hero-text ">
-                        DrillBase es un proyecto de máquina diseñado para automatizar las
+                        DrillBase es una máquina que automatiza las
                         perforaciones en el suelo mediante
-                        una barrena helicoidal, con el objetivo de reducir el esfuerzo físico
-                        del operador y mejorar
+                        una barrena helicoidal, reduciendo el esfuerzo físico
+                        del operador y mejorando
                         la precisión de cada agujero.
                     </p>
                     <div class="hero-actions">
@@ -61,13 +62,7 @@
                             3D</a>
                     </div>
                 </div>
-                <div class="hero-visual" aria-label="Identidad del proyecto DrillBase">
-                    <span class="visual-label">DRILLBASE / INGENIERÍA APLICADA</span>
-                    <img src="logo.png" alt="Identidad gráfica de DrillBase" width="600" height="600" fetchpriority="high">
-                    <div class="visual-caption"><span>DEL DISEÑO AL TERRENO</span><a href="#modelo-3d">Explorar el modelo →</a></div>
-                </div>
             </section>
-            <div class="project-strip"><span>EXPOTEC <strong>2026</strong></span><span>Perforación con barrena</span><span>Diseño orientado al operador</span><span>Proyecto académico</span></div>
 
             <section id="como-funciona" class="section">
                 <div class="section-head reveal">
@@ -78,7 +73,7 @@
                 <div class="steps">
                     <article class="step-card reveal">
                         <span class="step-number">01</span>
-                        <h3>Una necesidad real</h3>
+                        <h3>Perforación</h3>
                         <p>El proyecto DrillBase consiste en crear una máquina
                             que sirve para hacer
                             perforaciones en el suelo de forma más rápida,
@@ -153,16 +148,17 @@
                     </div>
                     <div class="feature-card reveal">
                         <h3>Eficiente</h3>
-                        <p>Busca ahorrar tiempo en cada perforación frente a los
+                        <p>Ahorra tiempo en cada perforación frente a los
                             métodos tradicionales.</p>
                     </div>
                     <div class="feature-card reveal">
-                        <h3>Menor esfuerzo</h3>
-                        <p>Busca reducir la carga física del operador durante el trabajo.</p>
+                        <h3>Segura</h3>
+                        <p>Reduce el esfuerzo físico y el riesgo asociado al
+                            trabajo manual.</p>
                     </div>
                     <div class="feature-card reveal">
                         <h3>Precisa</h3>
-                        <p>Busca mejorar el control de la profundidad y la posición de cada
+                        <p>Controla mejor la profundidad y la posición de cada
                             agujero.</p>
                     </div>
                 </div>
@@ -176,22 +172,12 @@
                         cualquier ángulo.</p>
                 </div>
 
-                <div class="model-stage">
-                    <span class="model-tag">VISOR INTERACTIVO / 3D</span>
-                    <model-viewer id="drill-model" class="model-viewer" src="motor.glb"
-                        alt="Modelo 3D del proyecto DrillBase" auto-rotate camera-controls
-                        shadow-intensity="1" exposure="1" camera-orbit="45deg 65deg auto"
-                        field-of-view="30deg" loading="lazy" touch-action="pan-y">
-                    </model-viewer>
-                    <p id="model-status" role="status">Cargando el modelo 3D…</p>
-                    <div class="model-controls">
-                        <button id="rotate-toggle" type="button" aria-pressed="true">Pausar giro</button>
-                        <button id="reset-view" type="button">Restablecer vista</button>
-                        <a href="motor.glb" download>Descargar modelo</a>
-                    </div>
-                </div>
-                <p class="model-help">Arrastra para girar y usa la rueda o dos dedos para acercarte. Con teclado: flechas para girar y teclas + / − para ajustar el zoom.</p>
-
+                <model-viewer class="model-viewer reveal" src="motor.glb"
+                    alt="Modelo 3D de DrillBase"
+                    auto-rotate camera-controls shadow-intensity="1"
+                    exposure="1"
+                    camera-orbit="45deg 65deg 2.2m" field-of-view="30deg"
+                    style="width:100%; height:100%;"></model-viewer>
 
             </section>
 
@@ -225,19 +211,11 @@
                 </div>
             </section>
 
-            <section id="preguntas" class="section faq">
-                <div class="section-head"><p class="eyebrow">Conoce el proyecto</p><h2>De la idea a la aplicación.</h2></div>
-                <div class="faq-list">
-                    <details><summary>¿Qué problema busca resolver DrillBase?</summary><p>El esfuerzo y el tiempo necesarios para realizar agujeros en el suelo. El diseño propone utilizar una barrena accionada por un motor para facilitar esta tarea.</p></details>
-                    <details><summary>¿Dónde se podría utilizar?</summary><p>Se plantea para trabajos de construcción que requieren perforaciones para tubos, columnas u otros elementos. Su uso dependerá del terreno y de la validación técnica del equipo.</p></details>
-                    <details><summary>¿Ya hay resultados de rendimiento?</summary><p>Esta página presenta la propuesta académica. Los tiempos de perforación, la profundidad de trabajo y otras especificaciones deberán confirmarse mediante pruebas del prototipo.</p></details>
-                </div>
-            </section>
         </main>
 
         <footer class="site-footer">
             <img src="mascota.png" class="footer-mascot" alt="Mascota de DrillBase">
-            <p>&copy; <span id="year"></span> DrillBase · Expotec 2026. Todos los derechos
+            <p>&copy; <span id="year"></span> DrillBase. Todos los derechos
                 reservados.</p>
         </footer>
 
