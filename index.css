@@ -1,10 +1,10 @@
 :root {
-    --bg:#121614;
-    --paper:#f3f4ed;
-    --text:#19251d;
-    --muted:#626d63;
-    --accent:#d5ed72;
-    --line:#dce1d6;
+    --bg:#0e0f11;
+    --paper:#f4f3f0;
+    --text:#17181b;
+    --muted:#5b5d63;
+    --accent:#a94943;
+    --line:#dedbd7;
     --max:1200px}
 * {
     box-sizing:border-box;
@@ -26,7 +26,7 @@ button {
 a,button {
     -webkit-tap-highlight-color:transparent}
 a:focus-visible,button:focus-visible,summary:focus-visible {
-    outline:3px solid #709b23;
+    outline:3px solid #a94943;
     outline-offset:5px}
 .skip-link {
     position:fixed;
@@ -41,7 +41,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible {
     position:sticky;
     top:0;
     z-index:100;
-    background:#121614f5;
+    background:#0e0f11f5;
     color:#fff;
     border-bottom:1px solid #ffffff18;
     backdrop-filter:blur(16px)}
@@ -74,7 +74,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible {
     padding:9px 12px;
     font-size:.82rem;
     text-decoration:none;
-    color:#bcc5bc;
+    color:#c3c0be;
     border-radius:5px}
 .nav-link:hover,.nav-link.active {
     color:var(--accent);
@@ -107,7 +107,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible {
     font-weight:600;
     letter-spacing:2px;
     text-transform:uppercase;
-    color:#4e6829;
+    color:#6a2e2a;
     margin-bottom:18px}
 .hero .eyebrow {
     color:var(--accent)}
@@ -120,7 +120,7 @@ h1 {
 .title {
     color:var(--accent)}
 .hero-text {
-    color:#b6c1b7;
+    color:#bcb9b7;
     max-width:520px;
     font-size:1rem;
     margin-bottom:32px}
@@ -139,20 +139,20 @@ h1 {
     transform:translateY(-3px)}
 .btn-primary {
     background:var(--accent);
-    color:#19251d}
+    color:#fff}
 .btn-ghost {
-    border:1px solid #647163;
-    color:#eef3e8}
+    border:1px solid #716766;
+    color:#f4f3f0}
 .hero-visual {
     min-width:0;
-    border:1px solid #62725355;
+    border:1px solid #a9494355;
     border-radius:10px;
-    background:radial-gradient(ellipse,#d5ed7210,transparent 70%),repeating-linear-gradient(0deg,transparent 0 39px,#ffffff04 40px),repeating-linear-gradient(90deg,transparent 0 39px,#ffffff04 40px);
+    background:radial-gradient(ellipse,#a9494310,transparent 70%),repeating-linear-gradient(0deg,transparent 0 39px,#ffffff04 40px),repeating-linear-gradient(90deg,transparent 0 39px,#ffffff04 40px);
     padding:22px}
 .visual-label,.visual-caption {
     font-size:.65rem;
     letter-spacing:1px;
-    color:#b9c4b4}
+    color:#c4b9b6}
 .hero-visual img {
     display:block;
     width:100%;
@@ -197,13 +197,13 @@ h2 {
     grid-template-columns:repeat(3,1fr);
     gap:20px}
 .step-card {
-    border-top:1px solid #a4b19b;
+    border-top:1px solid #b1a49f;
     padding:28px 0}
 .step-number {
     display:block;
     font-size:2.7rem;
     font-weight:400;
-    color:#748863;
+    color:#a94943;
     margin-bottom:24px;
     line-height:1}
 .step-card h3 {
@@ -214,7 +214,7 @@ h2 {
     color:var(--muted)}
 .section-alt {
     max-width:none;
-    background:#e5e9df}
+    background:#e9e6e2}
 .section-alt>* {
     max-width:1144px;
     margin-left:auto;
@@ -223,7 +223,7 @@ h2 {
     display:grid;
     grid-template-columns:1fr 1fr;
     gap:40px;
-    color:#4f5c50;
+    color:#5c5350;
     font-size:1.05rem}
 .feature-grid {
     display:grid;
@@ -246,11 +246,11 @@ h2 {
 #modelo-3d .eyebrow {
     color:var(--accent)}
 #modelo-3d .section-lead {
-    color:#b6c1b7}
+    color:#bcb9b7}
 .model-stage {
     position:relative;
-    background:#202820;
-    border:1px solid #475044;
+    background:#1c1d20;
+    border:1px solid #504744;
     border-radius:10px;
     padding:22px}
 .model-tag {
@@ -268,26 +268,26 @@ h2 {
     flex-wrap:wrap;
     gap:10px}
 .model-controls button,.model-controls a {
-    border:1px solid #62715c;
+    border:1px solid #71625f;
     background:transparent;
-    color:#eff5e9;
+    color:#f4f3f0;
     padding:10px 16px;
     border-radius:5px;
     font-size:.8rem;
     text-decoration:none}
 .model-controls button:hover,.model-controls a:hover {
-    background:#36422f}
+    background:#422f2d}
 .model-controls button:disabled {
     opacity:.45;
     cursor:default}
 #model-status {
     text-align:center;
-    color:#c7d4bf;
+    color:#d4c7c1;
     font-size:.85rem;
     margin-bottom:16px}
 .model-help {
     font-size:.8rem;
-    color:#aab8a2;
+    color:#b8aaa5;
     margin-top:18px;
     text-align:center}
 .team-grid {
@@ -302,7 +302,7 @@ h2 {
 .team-avatar {
     width:48px;
     height:48px;
-    background:#e8eddf;
+    background:#f0e5e2;
     display:grid;
     place-items:center;
     border-radius:50%;
@@ -321,7 +321,7 @@ h2 {
     gap:60px;
     padding-top:20px}
 .faq-list details {
-    border-bottom:1px solid #c7d1bf;
+    border-bottom:1px solid #d1c7c2;
     padding:20px 0}
 .faq-list summary {
     font-size:.95rem;
@@ -333,7 +333,7 @@ h2 {
     padding-top:14px}
 .site-footer {
     background:var(--bg);
-    color:#bcc5b7;
+    color:#c5bcb8;
     display:flex;
     align-items:center;
     justify-content:center;
@@ -367,9 +367,9 @@ h2 {
     top:100%;
     left:0;
     right:0;
-    background:#121614;
+    background:#0e0f11;
     padding:12px 28px;
-    border-bottom:1px solid #45523b;
+    border-bottom:1px solid #524541;
     flex-direction:column}
 #main-nav.open {
     display:flex}
@@ -423,3 +423,7 @@ h1 {
     animation:none!important;
     transition:none!important}
 }
+
+/* Preserve the original DrillBase palette with readable accent text. */
+.hero .eyebrow, .title, .visual-caption a, #modelo-3d .eyebrow, .model-tag { color: #cf817b; }
+.project-strip { color: #fff; }
