@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description"
+            content="Conoce DrillBase, un proyecto de ingeniería que automatiza la perforación del suelo para trabajar con mayor precisión y menos esfuerzo físico.">
+        <meta name="theme-color" content="#0e0f11">
+        <title>DrillBase | Ingeniería desde la base</title>
+        <link rel="icon" href="mascota.png" type="image/png">
+        <link rel="stylesheet" href="paginadeinicio.css">
+        <script src="paginadeinicio.js" defer></script>
+    </head>
+    <body>
+        <canvas id="terrain" aria-hidden="true"></canvas>
+        <div class="ambient" aria-hidden="true"></div>
+        <header class="site-header">
+            <a class="wordmark" href="paginadeinicio.html"
+                aria-label="DrillBase, inicio">D<span>B</span><i></i></a>
+            <span class="header-label">INGENIERÍA DESDE LA BASE</span>
+            <a class="project-link" href="index.html">Explorar proyecto <span
+                    aria-hidden="true">↗</span></a>
+        </header>
+        <main>
+            <section class="hero" aria-labelledby="hero-title">
+                <p class="eyebrow"><span></span> PROYECTO DE INGENIERÍA ·
+                    PERFORACIÓN AUTOMATIZADA</p>
+                <h1 id="hero-title"><span class="letraD">D</span>rill<span
+                        class="letraB">B</span>ase<span
+                        class="title-dot">.</span></h1>
+                <h2>Grandes ideas.<br>Desde el suelo.</h2>
+                <p class="intro">Automatizamos la perforación del suelo para
+                    construir con más precisión y menos esfuerzo. Descubre la
+                    ingeniería detrás de cada giro.</p>
+                <div class="hero-actions">
+                    <a class="start-button" href="index.html">Comenzar <span
+                            aria-hidden="true">↗</span></a>
+                    <a class="secondary-link"
+                        href="index.html#modelo-3d">Explorar modelo 3D <span
+                            aria-hidden="true">→</span></a>
+                </div>
+                <div class="principles" aria-label="Enfoque del proyecto">
+                    <span><b>01</b> Precisión</span><span><b>02</b>
+                        Automatización</span><span><b>03</b> Menos
+                        esfuerzo</span>
+                </div>
+            </section>
+            <aside class="technical-note" aria-label="Mecanismo del proyecto">
+                <svg viewBox="0 0 100 220" fill="none" aria-hidden="true"><path
+                        class="axis" d="M50 5V214M10 35H90M10 185H90" /><path
+                        class="drill"
+                        d="M44 20H56V184L50 202L44 184ZM30 48C78 48 78 70 30 70C78 70 78 92 30 92C78 92 78 114 30 114C78 114 78 136 30 136C78 136 78 158 30 158C78 158 72 180 44 180" /></svg>
+                <span>ROTACIÓN EN MOVIMIENTO</span><p>Motor + barrena
+                    helicoidal</p>
+            </aside>
+        </main>
+        <footer><span>DrillBase <span class="footer-divider">/</span>
+                Perforación inteligente</span><span
+                class="interaction-hint"><i></i> Mueve el cursor. Explora el
+                terreno.</span></footer>
+        <div class="cursor-follower" aria-hidden="true"></div>
+    </body>
+</html>
